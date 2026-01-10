@@ -1,0 +1,346 @@
+/* 全局設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 導航列 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* 背景圖 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* 通用區塊設定 */
+section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+/* 關於我 */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #e1e1e1;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* 技能卡片 */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* 時間軸 (經歷) */
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.timeline-date {
+    min-width: 150px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.timeline-content h3 {
+    margin-bottom: 5px;
+}
+.timeline-content h4 {
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* 專案卡片 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #2c3e50;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+
+/* 導航列捲動後的背景色變化 (可選：讓導航列在捲動後變深色) */
+.navbar.nav-scrolled {
+    background-color: rgba(44, 62, 80, 0.95); /* 稍微透明的深色 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* 讓目前所在的選單文字變色或加底線 */
+.nav-links a.active {
+    color: #3498db !important;
+    font-weight: bold;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.fa-line {
+    color: #06C755;
+}
+
+
+
+.email-container {
+    margin: 15px;
+    padding: 10px 20px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+}
+
+#email-text {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+#copy-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+#copy-btn:hover {
+    background: #2980b9;
+}
+
+#copy-btn.success {
+    background: #27ae60; /* 成功後的綠色 */
+}
+
+
+#copy-email-btn {
+    display: inline-block;
+    margin: 15px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: transparent; /* 背景透明 */
+    color: #333; /* 文字顏色 */
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit; /* 繼承原本字體 */
+}
+
+#copy-email-btn i {
+    color: #3498db; /* 圖示顏色 */
+    margin-right: 8px;
+}
+
+#copy-email-btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+#copy-email-btn:hover i {
+    color: white;
+}
+
+
+
+
+/* 手機版適配 */
+@media (max-width: 768px) {
+    /* ... 你原本的設定 ... */
+    
+    .nav-links {
+        display: none; /* 預設隱藏 */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    /* 當 JS 加入 nav-active 時顯示 */
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* 讓三條線變 X 的動畫（選配） */
+    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle .line2 { opacity: 0; }
+    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+}

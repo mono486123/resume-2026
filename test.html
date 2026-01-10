@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>你的名字｜履歷</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#101a2e; --text:#e8eefc; --muted:#a9b6d3;
+      --accent:#7c5cff; --line:rgba(255,255,255,.12);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      "Noto Sans TC","PingFang TC","Microsoft JhengHei", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 10% 0%, rgba(124,92,255,.35), transparent 55%),
+        radial-gradient(900px 600px at 90% 10%, rgba(0,212,255,.18), transparent 60%),
+        var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1040px; margin:0 auto; padding:28px 18px 60px}
+    .nav{
+      position:sticky; top:12px; z-index:10;
+      display:flex; justify-content:space-between; align-items:center;
+      gap:12px; padding:12px 14px; border:1px solid var(--line);
+      background:rgba(16,26,46,.75); backdrop-filter: blur(10px);
+      border-radius:14px; box-shadow: var(--shadow);
+    }
+    .brand{font-weight:800; letter-spacing:.2px}
+    .links{display:flex; gap:10px; flex-wrap:wrap}
+    .links a{
+      padding:8px 10px; border-radius:10px; border:1px solid transparent;
+      color:var(--muted)
+    }
+    .links a:hover{border-color:var(--line); color:var(--text)}
+    .hero{display:grid; grid-template-columns: 1.35fr .65fr; gap:18px; margin-top:18px}
+    .card{
+      border:1px solid var(--line); background:rgba(16,26,46,.6);
+      border-radius:16px; padding:18px; box-shadow: var(--shadow);
+    }
+    .title{font-size:34px; line-height:1.1; margin:0 0 10px}
+    .subtitle{margin:0; color:var(--muted)}
+    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+    .pill{padding:7px 10px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:13px}
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .btn.primary{background:var(--accent); border-color:transparent; color:white}
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin-top:18px}
+    h2{font-size:18px; margin:0 0 10px}
+    .item{padding:12px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.02)}
+    .item b{display:block; margin-bottom:4px}
+    .meta{color:var(--muted); font-size:13px}
+    ul{margin:10px 0 0; padding-left:18px}
+    footer{margin-top:24px; color:var(--muted); font-size:13px; text-align:center}
+    @media (max-width: 860px){
+      .hero{grid-template-columns: 1fr}
+      .grid{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">你的名字</div>
+      <div class="links">
+        <a href="#about">關於</a>
+        <a href="#skills">技能</a>
+        <a href="#exp">經歷</a>
+        <a href="#proj">專案</a>
+        <a href="#contact">聯絡</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="card">
+        <h1 class="title">資安 / 軟體工程師</h1>
+        <p class="subtitle">一句話價值主張：你能解決什麼問題、你擅長什麼、你想找什麼類型的職缺。</p>
+
+        <div class="pillrow">
+          <span class="pill">Kaohsiung, TW</span>
+          <span class="pill">Python</span>
+          <span class="pill">Security</span>
+          <span class="pill">ML / CV</span>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn primary" href="./resume.pdf" target="_blank" rel="noreferrer">下載 PDF</a>
+          <a class="btn" href="https://github.com/你的帳號" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/你的帳號" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="card" id="contact">
+        <h2>聯絡方式</h2>
+        <div class="item">
+          <b>Email</b>
+          <div class="meta"><a href="mailto:you@example.com">you@example.com</a></div>
+        </div>
+        <div class="item" style="margin-top:10px">
+          <b>Phone</b>
+          <div class="meta">+886 9xx-xxx-xxx</div>
+        </div>
+        <div class="item" style="margin-top:10px">
+          <b>Links</b>
+          <div class="meta">Portfolio / Blog / X / Medium</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <div class="card" id="about">
+        <h2>關於我</h2>
+        <p class="subtitle">2–4 句，聚焦：年資/領域/成果/偏好的工作型態（例如：後端、資安、AI 工程化）。</p>
+      </div>
+
+      <div class="card" id="skills">
+        <h2>技能</h2>
+        <div class="item">
+          <b>Backend</b>
+          <div class="meta">FastAPI / Django / REST / PostgreSQL / Redis</div>
+        </div>
+        <div class="item" style="margin-top:10px">
+          <b>Security</b>
+          <div class="meta">Threat modeling / Web security / IAM / Incident response</div>
+        </div>
+        <div class="item" style="margin-top:10px">
+          <b>ML</b>
+          <div class="meta">YOLO / PyTorch / Data pipeline / Evaluation</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card" id="exp">
+        <h2>工作 / 實習經歷</h2>
+        <div class="item">
+          <b>公司 / 團隊（職稱）</b>
+          <div class="meta">2024.06 – 2025.12｜Kaohsiung</div>
+          <ul>
+            <li>用「動詞 + 影響」寫成就：例如降低 XX%、提升吞吐、縮短 MTTR。</li>
+            <li>列出技術棧與你主導的部分。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="proj">
+        <h2>專案</h2>
+        <div class="item">
+          <b>Project Name</b>
+          <div class="meta">Python / Security / ML｜<a href="#" target="_blank" rel="noreferrer">Demo</a> · <a href="#" target="_blank" rel="noreferrer">Code</a></div>
+          <ul>
+            <li>描述你做了什麼、為什麼重要、成果是什麼。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> 你的名字｜Hosted on GitHub Pages</footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

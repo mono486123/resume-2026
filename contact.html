@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡方式 | 施坤政</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-page {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .contact-links {
+            margin-top: 30px;
+        }
+        /* 讓 a 標籤和按鈕的外觀完全一致 */
+        .contact-links a, #copy-email-btn {
+            display: inline-block;
+            margin: 15px;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #333;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            font-family: inherit;
+        }
+        .contact-links a:hover, #copy-email-btn:hover {
+            background-color: #3498db;
+            color: white !important;
+        }
+        /* 讓圖標顏色正確 */
+        .fa-github { color: #333; }
+        .fa-line { color: #06C755; }
+        .fa-envelope { color: #3498db; }
+        #copy-email-btn:hover i { color: white; }
+
+        .back-home {
+            margin-top: 50px;
+            color: #7f8c8d;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">K.C. Shih</div>
+        <ul class="nav-links">
+            <li><a href="index.html">返回首頁</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-page container">
+        <h2 class="section-title">聯絡我</h2>
+        <p>如果您對我的專案感興趣，或有任何合作機會，歡迎透過以下方式聯繫：</p>
+        
+        <div class="contact-links">
+            <a href="https://github.com/mono486123" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://line.me/ti/p/eMNgmje8w3" target="_blank"><i class="fa-brands fa-line"></i> LINE</a>
+        
+            <button onclick="copyEmail(this)" 
+                    data-email="jack0937601991@gmail.com" 
+                    id="copy-email-btn" 
+                    title="點擊複製 Email">
+                <i class="fa-solid fa-envelope"></i> Email
+            </button>
+        </div>
+
+        <a href="index.html" class="back-home">返回履歷首頁</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 施坤政 Kun-Cheng Shih. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2.6"></script>
+</body>
+</html>
